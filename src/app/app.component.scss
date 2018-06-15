@@ -1,0 +1,9 @@
+.main-container {
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 52px;
+  @media screen and (max-height: 599px) {
+    padding-top: 0px;
+    padding-left: 72px;
+  }
+}
