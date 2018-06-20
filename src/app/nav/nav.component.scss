@@ -1,4 +1,6 @@
-$main-background: #4a4aa8;
+$main-background: #478bb8;
+$white: rgba(255, 255, 255, 1);
+$transparent: rgba(0, 0, 0, 0);
 
 nav {
   box-sizing: border-box;
@@ -16,7 +18,7 @@ nav {
     padding: 8px 16px;
   }
   &.vertical {
-    width: 72px;
+    width: 52px;
     height: 100vh;
     flex-direction: column;
     padding: 16px 8px;
@@ -25,8 +27,30 @@ nav {
 .mat-button {
   &.vertical {
     min-width: initial;
+    padding: initial;
+    line-height: 30px;
   }
 }
 span.vertical {
   display: block;
+}
+a {
+  transition: border 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  border-bottom-left-radius: 0;
+  &.horizontal {
+    border-bottom: 2px solid $transparent;
+    border-bottom-right-radius: 0;
+  }
+  &.vertical {
+    border-left: 2px solid $transparent;
+    border-top-left-radius: 0;
+  }
+}
+a.active {
+  &.horizontal {
+    border-bottom: 2px solid $white;
+  }
+  &.vertical {
+    border-left: 2px solid $white;
+  }
 }

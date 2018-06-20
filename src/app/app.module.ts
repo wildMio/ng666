@@ -11,11 +11,13 @@ import { SharedMaterialModule } from './shared-material/shared-material.module';
 import { WidgetModule } from './widget/widget.module';
 
 import { NavComponent } from './nav/nav.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,

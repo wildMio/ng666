@@ -1,34 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-nav></app-nav>
 <section class="main-container">
-  <h2>Basic</h2>
-  <div appToggle #firstToggle="toggle" (toggle)="onToggle('first', $event)">
-    <p>
-      First:
-      <app-toggle-on>On</app-toggle-on>
-      <app-toggle-off>Off</app-toggle-off>
-      <app-toggle-button></app-toggle-button>
-    </p>
-    <appToggle #secondToggle="toggle" (toggle)="onToggle('second', $event)">
-      <p>
-        Second:
-        <app-toggle-on>On</app-toggle-on>
-        <app-toggle-off>Off</app-toggle-off>
-        <app-toggle-button></app-toggle-button>
-      </p>
-    </appToggle>
-  </div>
-  <h2>Explicit References</h2>
-  <p [withToggle]="firstToggle">
-    First:
-    <app-toggle-on>On</app-toggle-on>
-    <app-toggle-off>Off</app-toggle-off>
-    <app-toggle-button></app-toggle-button>
-  </p>
-  <p [withToggle]="secondToggle">
-    Second:
-    <app-toggle-on>On</app-toggle-on>
-    <app-toggle-off>Off</app-toggle-off>
-    <app-toggle-button></app-toggle-button>
-  </p>
+  <router-outlet></router-outlet>
 </section>

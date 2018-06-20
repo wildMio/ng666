@@ -1,0 +1,41 @@
+<h2>Basic</h2>
+<div appToggle #firstToggle="toggle" (toggle)="onToggle('first', $event)"
+  toggleLabel="tglb" withToggleLabel="wthlb">
+  <p>
+    First:
+    <app-toggle-on>On</app-toggle-on>
+    <app-toggle-off>Off</app-toggle-off>
+    <app-toggle-button></app-toggle-button>
+  </p>
+  <appToggle #secondToggle="toggle" (toggle)="onToggle('second', $event)">
+    <p>
+      Second:
+      <app-toggle-on>On</app-toggle-on>
+      <app-toggle-off>Off</app-toggle-off>
+      <app-toggle-button></app-toggle-button>
+    </p>
+  </appToggle>
+</div>
+<h2>Explicit References</h2>
+<p [withToggle]="firstToggle">
+  <app-toggle-button></app-toggle-button>
+  First:
+  <app-toggle-on>On</app-toggle-on>
+  <app-toggle-off>Off</app-toggle-off>
+</p>
+<p [withToggle]="secondToggle">
+  <app-toggle-button></app-toggle-button>
+  Second:
+  <app-toggle-on>On</app-toggle-on>
+  <app-toggle-off>Off</app-toggle-off>
+</p>
+
+<h3>Workaround to avoid red squiggles</h3>
+<mio-toggle>
+  <ng-template let-on="on" let-fns="fns">
+    {{ on
+        ? 'The button is on'
+        : 'The button is off'}}
+    <app-switch [on]="on" (click)="fns.toggle()"></app-switch>
+  </ng-template>
+</mio-toggle>

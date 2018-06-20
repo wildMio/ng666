@@ -1,13 +1,13 @@
 <nav [ngClass]="cssHeight">
-  <a mat-button [ngClass]="cssHeight">
+  <a mat-button [ngClass]="cssHeight" routerLinkActive='active' [routerLink]="['/', 'project']">
     <mat-icon>storage</mat-icon><span [ngClass]="{'mat-title': cssHeight.horizontal, 'vertical': cssHeight.vertical}" class="mat-title">庫存</span>
   </a>
   <mat-divider [vertical]="cssHeight.horizontal"></mat-divider>
-  <a mat-button [ngClass]="cssHeight">
+  <a mat-button [ngClass]="cssHeight" routerLinkActive='active' [routerLink]="['/', 'member']">
     <mat-icon>perm_data_setting</mat-icon><span [ngClass]="{'mat-title': cssHeight.horizontal, 'vertical': cssHeight.vertical}" class="mat-title">會員</span>
   </a>
   <mat-divider [vertical]="cssHeight.horizontal"></mat-divider>
-  <a mat-button [ngClass]="cssHeight">
+  <a mat-button [ngClass]="cssHeight" routerLinkActive='active' [routerLink]="['/', 'log']">
     <mat-icon>receipt</mat-icon><span [ngClass]="{'mat-title': cssHeight.horizontal, 'vertical': cssHeight.vertical}" class="mat-title">日誌</span>
   </a>
 </nav>

@@ -6,6 +6,7 @@ import { SwitchComponent } from './irrelevant-implementation-details/switch.comp
 import { ToggleButtonComponent } from './toggle/toggle-button/toggle-button.component';
 import { ToggleOnComponent } from './toggle/toggle-on/toggle-on.component';
 import { ToggleOffComponent } from './toggle/toggle-off/toggle-off.component';
+import { MioToggleComponent } from './mio-toggle/mio-toggle.component';
 
 @NgModule({
   imports: [
@@ -16,8 +17,18 @@ import { ToggleOffComponent } from './toggle/toggle-off/toggle-off.component';
     ToggleDirective,
     ToggleButtonComponent,
     ToggleOnComponent,
-    ToggleOffComponent
+    ToggleOffComponent,
+    MioToggleComponent,
+    SwitchComponent
   ],
-  declarations: [WithToggleDirective, ToggleDirective, SwitchComponent, ToggleButtonComponent, ToggleOnComponent, ToggleOffComponent]
+  declarations: [
+    WithToggleDirective,
+    ToggleDirective,
+    SwitchComponent,
+    ToggleButtonComponent,
+    ToggleOnComponent,
+    ToggleOffComponent,
+    MioToggleComponent
+  ]
 })
 export class WidgetModule { }

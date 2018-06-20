@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-
-  onToggle(message, on) {
-    console.log(message, on);
+  @HostListener('document:keyup', ['$event']) onKeyUp(ev) {
+    console.log(ev);
   }
 }

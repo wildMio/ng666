@@ -9,7 +9,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class NavComponent implements OnInit {
   cssHeight: CssHeight;
-
   constructor(
     breakpointObserver: BreakpointObserver,
     private router: Router,
