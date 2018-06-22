@@ -1,13 +1,19 @@
 <nav [ngClass]="cssHeight">
-  <a mat-button [ngClass]="cssHeight" routerLinkActive='active' [routerLink]="['/', 'project']">
+  <a mat-button [ngClass]="cssHeight" class="nav-toggle">
+    <mat-icon>apps</mat-icon>
+  </a>
+  <a mat-button [ngClass]="cssHeight"
+    [routerLink]="['/', 'project']" routerLinkActive="active">
     <mat-icon>storage</mat-icon><span [ngClass]="{'mat-title': cssHeight.horizontal, 'vertical': cssHeight.vertical}" class="mat-title">庫存</span>
   </a>
   <mat-divider [vertical]="cssHeight.horizontal"></mat-divider>
-  <a mat-button [ngClass]="cssHeight" routerLinkActive='active' [routerLink]="['/', 'member']">
+  <a mat-button [ngClass]="cssHeight"
+    [routerLink]="['/', 'member']" routerLinkActive="active">
     <mat-icon>perm_data_setting</mat-icon><span [ngClass]="{'mat-title': cssHeight.horizontal, 'vertical': cssHeight.vertical}" class="mat-title">會員</span>
   </a>
   <mat-divider [vertical]="cssHeight.horizontal"></mat-divider>
-  <a mat-button [ngClass]="cssHeight" routerLinkActive='active' [routerLink]="['/', 'log']">
+  <a mat-button [ngClass]="cssHeight"
+    [routerLink]="['/', 'log']" routerLinkActive="active">
     <mat-icon>receipt</mat-icon><span [ngClass]="{'mat-title': cssHeight.horizontal, 'vertical': cssHeight.vertical}" class="mat-title">日誌</span>
   </a>
 </nav>

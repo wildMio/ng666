@@ -1,4 +1,4 @@
-import { Directive, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Directive, Input, Output, EventEmitter, OnChanges, SimpleChanges, ChangeDetectorRef } from '@angular/core';
 
 @Directive({
   exportAs: 'toggle',
@@ -10,8 +10,11 @@ export class ToggleDirective implements OnChanges {
 
   @Input() toggleLabel: string;
 
-  constructor() {
+  constructor(
+    private cd: ChangeDetectorRef
+  ) {
     console.log('toggle');
+    console.log(cd);
   }
 
   setOnState(on: boolean) {

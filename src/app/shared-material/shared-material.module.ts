@@ -4,6 +4,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatIconModule } from '@angular/material/icon';
+import { MatRippleModule } from '@angular/material/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   imports: [
@@ -13,7 +15,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatDividerModule,
     MatButtonModule,
     LayoutModule,
-    MatIconModule
+    MatIconModule,
+    MatRippleModule,
+    MatProgressBarModule
   ],
   declarations: []
 })
